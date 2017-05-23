@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Project 1 - Funda</title>
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+	<nav>
+		<div class="container-logo">
+			<a href="#view-home">
+				<img src="http://assets.fstatic.nl/master_991/assets/components/logo/fundawonen-logo.svg" alt="">
+			</a>
+		</div>
+		<ul>
+			<li>Inloggen</li>
+			<li>Registreren</li>
+		</ul>
+	</nav>
+	<article class="view view-home" id="view-home">
+		<section class="container-search">
+			<div class="container-search-form">
+				<form class="search-form">
+					<label for="search-input"><img class="location-icon" src="static/assets/location-icon.png" alt="">Locatie</label>
+					<div>
+
+						<input id="search-input" placeholder="Plaats, buurt, adres etc." class="search-input" type="text">
+						<!-- <div class="container-suggest"></div> -->
+						<button type="submit">Zoek</button>
+					</div>
+					
+				</form>
+			</div>
+			<div class="container-filters">
+				<h3 class="filter-heading"><img class="filter-icon" src="static/assets/filter-icon.png" alt="">Filters</h3>
+				<p class="filter-text">Sleep de filters in jouw persoonlijke volgorde van meest naar minst belangrijk</p>
+				<p class="most-important-text">Meest belangrijk</p>
+				<div class="filter-list" id="filter-list">
+					<div class="filter acc acc-inactive filter-kind" id="filter-kind">
+						<section class="acc-main">
+							<div class="container-drag-icon"><img class="drag-icon" src="static/assets/dragicon.png" alt="">	<p class="filter-name">Soort</p>
+							</div>
+							
+							
+							<div class="container-selected-filter">
+								<p class="selected-filter current-kind">Woonhuis</p>
+								<img class="acc-icon acc-open-icon" src="static/assets/acc-icon.png" alt="">
+							</div>
+						</section>
+						<section class="acc-extra">
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-kind-input filter-input" name="kind" id="woonhuis" value="woonhuis">
+								<label for="woonhuis">Woonhuis</label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-kind-input filter-input" name="kind" id="appartement" value="appartement">
+								<label for="appartement">Appartement</label>
+							</fieldset>
+						</section>
+					</div>
+					<div class="filter acc acc-inactive filter-price" id="filter-price">
+						<section class="acc-main">
+							<div class="container-drag-icon"><img class="drag-icon" src="static/assets/dragicon.png" alt="">	<p class="filter-name">Prijs</p>
+							</div>
+							
+							
+							<div class="container-selected-filter">
+								<p class="selected-filter"><span class="current-price-from">0</span> - <span class="current-price-till">500.000</span></p>
+								<img class="acc-icon acc-open-icon" src="static/assets/acc-icon.png" alt="">
+							</div>
+						</section>
+						<section class="acc-extra">
+							<fieldset class="filter-fieldset">
+								<label for="van">Van</label>
+								<select name="priceFrom" id="van" class="filter-input" class="filter-input">
+									<option value="0">0</option>
+									<option value="100000">100.000</option>
+									<option value="200000">200.000</option>
+									<option value="300000">300.000</option>
+									<option value="400000">400.000</option>
+									<option value="500000">500.000</option>
+								</select>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<label for="tot">Tot</label>
+								<select name="priceTill" id="tot" class="filter-input">
+									<option value="0">0</option>
+									<option value="100000">100.000</option>
+									<option value="200000">200.000</option>
+									<option value="300000">300.000</option>
+									<option value="400000">400.000</option>
+									<option value="500000">500.000</option>
+								</select>
+							</fieldset>
+						</section>
+					</div>
+					<div class="filter acc acc-inactive filter-rooms" id="filter-rooms">
+						<section class="acc-main">
+							<div class="container-drag-icon"><img class="drag-icon" src="static/assets/dragicon.png" alt="">	<p class="filter-name">Kamers</p>
+							</div>
+							
+							
+							<div class="container-selected-filter">
+								<p class="selected-filter current-rooms">3+</p>
+								<img class="acc-icon acc-open-icon" src="static/assets/acc-icon.png" alt="">
+							</div>
+						</section>
+						<section class="acc-extra">
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-room-input filter-input" name="room" id="1kamers" value="1">
+								<label for="1kamers">1 kamer</label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-room-input filter-input" name="room" id="2kamers" value="2">
+								<label for="2kamers">2+ kamers</label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-room-input filter-input" name="room" id="3kamers" value="3">
+								<label for="3kamers">3+ kamers</label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-room-input filter-input" name="room" id="4kamers" value="4">
+								<label for="4kamers">4+ kamers</label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-room-input filter-input" name="room" id="5kamers" value="5">
+								<label for="5kamers">5+ kamers</label>
+							</fieldset>
+						</section>
+					</div>
+					<div class="filter acc acc-inactive filter-surface" id="filter-surface">
+						<section class="acc-main">
+							<div class="container-drag-icon"><img class="drag-icon" src="static/assets/dragicon.png" alt="">	<p class="filter-name">Woonoppervlakte</p>
+							</div>
+							<div class="container-selected-filter">
+								<p class="selected-filter current-surface">50+ m<sup>2</sup></p>
+								<img class="acc-icon acc-open-icon" src="static/assets/acc-icon.png" alt="">
+							</div>
+						</section>
+						<section class="acc-extra">
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-surface-input filter-input" name="surface" id="50meter" value="50">
+								<label for="50meter">50+ m<sup>2</sup></label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-surface-input filter-input" name="surface" id="75meter" value="75">
+								<label for="75meter">75+ m<sup>2</sup></label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-surface-input filter-input" name="surface" id="100meter" value="100">
+								<label for="100meter">100+ m<sup>2</sup></label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-surface-input filter-input" name="surface" id="150meter" value="150">
+								<label for="150meter">150+ m<sup>2</sup></label>
+							</fieldset>
+							<fieldset class="filter-fieldset">
+								<input type="radio" class="filter-surface-input filter-input" name="surface" id="250meter" value="250">
+								<label for="250meter">250+ m<sup>2</sup></label>
+							</fieldset>
+						</section>
+					</div>
+				</div>
+				<button class="btn-add-filter">Filter toevoegen</button>
+				<p class="least-important-text">Minst belangrijk</p>
+			</div>
+		</section>
+
+		<section class="container-objects"></section>
+	</article>
+	<article class="view view-detail js-hide" id="view-detail">
+		<p>Nog geen huizen opgehaald</p>
+	</article>
+<script id="list-template" type="x-template">
+	<section>
+		<img class="list-object-img">
+		<a class="list-detail-link">
+			<div class="container-list-object-text">
+				<div class="container-list-object-title">
+					<h2 class="list-object-adres"></h2>
+					<p class="list-object-plaatsnaam"></p>		
+				</div>
+				<div class="container-list-object-info">
+					<p class="list-object-price"></p>
+					<p><span class="list-object-rooms"></span> Kamers</p>
+				</div>
+			</div>
+		</a>
+	</section>
+</script>
+<script id="suggest-template" type="x-template">
+	<p class="suggest-text"></p>
+</script>
+<script id="detail-template" type="x-template">
+	<div class="container-detail-info">
+		<div class="container-detail-object-title">
+			<h2><span class="detail-object-adres"></span> - <span class="detail-object-plaatsnaam"></span></h2>	
+		</div>
+		<div class="container-detail-object-info">
+			<img class="detail-img">
+			<div>
+				<p class="detail-object-price"></p>
+				<p><span class="detail-object-rooms"></span>  Kamers</p>
+				<p class="detail-kind"></p>
+			</div>
+		</div>
+	</div>	
+</script>
+ <script src="static/js/Sortable.min.js"></script>
+<script src="static/js/routie.js"></script>
+<script src="static/js/config.js"></script>
+<script src="static/js/script.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
